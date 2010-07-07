@@ -7,35 +7,58 @@
            fetch="git://git.android-x86.org/" />
   <default revision="froyo"
            remote="korg" />
-
-  <project path="build" name="platform/build">
+  <!-- from x86 port repositories -->
+  <project path="build" name="platform/build" remote="x86" revision="froyo-x86" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
-  <project path="bionic" name="platform/bionic" />
+  <project path="kernel" name="kernel/common" revision="android-2.6.32" remote="x86" />
+  <project path="bionic" name="platform/bionic" remote="x86" revision="froyo-x86" />
+  <project path="bootable/newinstaller" name="platform/bootable/newinstaller" remote="x86" revision="froyo-x86" />
+  <project path="dalvik" name="platform/dalvik" remote="x86" revision="froyo-x86" />
+  <project path="development" name="platform/development" remote="x86" revision="froyo-x86" />
+  <project path="external/bluetooth/bluez" name="platform/external/bluetooth/bluez" remote="x86" revision="froyo-x86" />
+  <project path="external/busybox" name="platform/external/busybox" remote="x86" revision="froyo-x86" />
+  <project path="external/eject" name="platform/external/eject" remote="x86" revision="froyo-x86" />
+  <project path="external/ppp" name="platform/external/ppp" remote="x86" revision="froyo-x86" />
+  <project path="external/stlport" name="platform/external/stlport" remote="x86" revision="froyo-x86" />
+  <project path="external/tremolo" name="platform/external/tremolo" remote="x86" revision="froyo-x86" />
+  <project path="external/tslib" name="platform/external/tslib" remote="x86" revision="froyo-x86" />
+  <project path="frameworks/base" name="platform/frameworks/base" remote="x86" revision="froyo-x86" />
+  <project path="frameworks/policies/base" name="platform/frameworks/policies/base" remote="x86" revision="froyo-x86" />
+  <project path="ndk" name="platform/ndk" remote="x86" revision="froyo-x86" />
+  <project path="packages/apps/Browser" name="platform/packages/apps/Browser" remote="x86" revision="froyo-x86" />
+  <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" remote="x86" revision="froyo-x86" />
+  <project path="packages/apps/Camera" name="platform/packages/apps/Camera" remote="x86" revision="froyo-x86" />
+  <project path="packages/apps/ConnectBot" name="platform/packages/apps/ConnectBot" remote="x86" revision="froyo-x86" />
+  <project path="packages/apps/Contacts" name="platform/packages/apps/Contacts" remote="x86" revision="froyo-x86" />
+  <project path="packages/apps/DeskClock" name="platform/packages/apps/DeskClock" remote="x86" revision="froyo-x86" />
+  <project path="packages/apps/FileManager" name="platform/packages/apps/FileManager" remote="x86" revision="froyo-x86" />
+  <project path="packages/apps/LIME" name="platform/packages/apps/LIME" remote="x86" revision="froyo-x86" />
+  <project path="packages/apps/Music" name="platform/packages/apps/Music" remote="x86" revision="froyo-x86" />
+  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" remote="x86" revision="froyo-x86" />
+  <project path="packages/inputmethods/PinyinIME" name="platform/packages/inputmethods/PinyinIME" remote="x86" revision="froyo-x86" />
+  <project path="packages/providers/DownloadProvider" name="platform/packages/providers/DownloadProvider" remote="x86" revision="froyo-x86" />
+  <project path="packages/wallpapers/Basic" name="platform/packages/wallpapers/Basic" remote="x86" revision="froyo-x86" />
+  <project path="packages/wallpapers/MagicSmoke" name="platform/packages/wallpapers/MagicSmoke" remote="x86" revision="froyo-x86" />
+  <project path="packages/wallpapers/MusicVisualization" name="platform/packages/wallpapers/MusicVisualization" remote="x86" revision="froyo-x86" />
+  <project path="prebuilt" name="platform/prebuilt" remote="x86" revision="froyo-x86" />
+  <project path="sdk" name="platform/sdk" remote="x86" revision="froyo-x86" />
+  <project path="system/bluetooth" name="platform/system/bluetooth" remote="x86" revision="froyo-x86" />
+  <project path="system/core" name="platform/system/core" remote="x86" revision="froyo-x86" />
+  <project path="system/extras" name="platform/system/extras" remote="x86" revision="froyo-x86" />
+  <project path="system/vold" name="platform/system/vold" remote="x86" revision="froyo-x86" />
 
+  <!-- from original Android repositories -->
   <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" />
-  <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller" />
   <project path="bootable/recovery" name="platform/bootable/recovery" />
 
-  <project path="cts" name="platform/cts" />
-  <project path="dalvik" name="platform/dalvik" />
-  <project path="development" name="platform/development" />
-
-  <project path="device/common" name="device/common" />
-  <project path="device/htc/common" name="device/htc/common" />
-  <project path="device/htc/dream" name="device/htc/dream" />
-  <project path="device/htc/dream-sapphire" name="device/htc/dream-sapphire" />
-  <project path="device/htc/passion" name="device/htc/passion" />
-  <project path="device/htc/passion-common" name="device/htc/passion-common" />
-  <project path="device/htc/sapphire" name="device/htc/sapphire" />
-  <project path="device/sample" name="device/sample" />
-
+  <project path="external/alsa-lib" name="platform/external/alsa-lib" />
+  <project path="external/alsa-utils" name="platform/external/alsa-utils" />
   <project path="external/apache-http" name="platform/external/apache-http" />
   <project path="external/astl" name="platform/external/astl" />
   <project path="external/bison" name="platform/external/bison" />
   <project path="external/blktrace" name="platform/external/blktrace" />
-  <project path="external/bluetooth/bluez" name="platform/external/bluetooth/bluez" />
   <project path="external/bluetooth/glib" name="platform/external/bluetooth/glib" />
   <project path="external/bluetooth/hcidump" name="platform/external/bluetooth/hcidump" />
   <project path="external/bsdiff" name="platform/external/bsdiff" />
@@ -70,7 +93,6 @@
   <project path="external/jpeg" name="platform/external/jpeg" />
   <project path="external/jsr305" name="platform/external/jsr305" />
   <project path="external/junit" name="platform/external/junit" />
-  <project path="external/kernel-headers" name="platform/external/kernel-headers" />
   <project path="external/libffi" name="platform/external/libffi" />
   <project path="external/libpcap" name="platform/external/libpcap" />
   <project path="external/libpng" name="platform/external/libpng" />
@@ -83,9 +105,7 @@
   <project path="external/openssl" name="platform/external/openssl" />
   <project path="external/oprofile" name="platform/external/oprofile" />
   <project path="external/ping" name="platform/external/ping" />
-  <project path="external/ppp" name="platform/external/ppp" />
   <project path="external/proguard" name="platform/external/proguard" />
-  <project path="external/qemu" name="platform/external/qemu"  revision="tools_r6"/>
   <project path="external/quake" name="platform/external/quake" />
   <project path="external/safe-iop" name="platform/external/safe-iop" />
   <project path="external/skia" name="platform/external/skia" />
@@ -93,47 +113,31 @@
   <project path="external/speex" name="platform/external/speex" />
   <project path="external/sqlite" name="platform/external/sqlite" />
   <project path="external/srec" name="platform/external/srec" />
-  <project path="external/stlport" name="platform/external/stlport" />
   <project path="external/strace" name="platform/external/strace" />
   <project path="external/svox" name="platform/external/svox" />
   <project path="external/tagsoup" name="platform/external/tagsoup" />
   <project path="external/tcpdump" name="platform/external/tcpdump" />
   <project path="external/tinyxml" name="platform/external/tinyxml" />
-  <project path="external/tremolo" name="platform/external/tremolo" />
   <project path="external/v8" name="platform/external/v8" />
   <project path="external/webkit" name="platform/external/webkit" />
   <project path="external/wpa_supplicant" name="platform/external/wpa_supplicant" />
   <project path="external/wpa_supplicant_6" name="platform/external/wpa_supplicant_6" />
   <project path="external/xmlwriter" name="platform/external/xmlwriter" />
-  <project path="external/yaffs2" name="platform/external/yaffs2" />
   <project path="external/zlib" name="platform/external/zlib" />
 
-  <project path="frameworks/base" name="platform/frameworks/base" />
   <project path="frameworks/ex" name="platform/frameworks/ex" />
   <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" />
-  <project path="frameworks/policies/base" name="platform/frameworks/policies/base" />
 
-  <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" />
+  <project path="hardware/alsa_sound" name="platform/hardware/alsa_sound" />
   <project path="hardware/libhardware" name="platform/hardware/libhardware" />
   <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" />
-  <project path="hardware/msm7k" name="platform/hardware/msm7k" />
-  <project path="hardware/qcom/gps" name="platform/hardware/qcom/gps" />
   <project path="hardware/ril" name="platform/hardware/ril" />
-  <project path="hardware/ti/omap3" name="platform/hardware/ti/omap3" />
-  <project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" />
-
-  <project path="ndk" name="platform/ndk" />
 
   <project path="packages/apps/AccountsAndSyncSettings" name="platform/packages/apps/AccountsAndSyncSettings" />
   <project path="packages/apps/AlarmClock" name="platform/packages/apps/AlarmClock" />
   <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" />
-  <project path="packages/apps/Browser" name="platform/packages/apps/Browser" />
   <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" />
-  <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" />
-  <project path="packages/apps/Camera" name="platform/packages/apps/Camera" />
   <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" />
-  <project path="packages/apps/Contacts" name="platform/packages/apps/Contacts" />
-  <project path="packages/apps/DeskClock" name="platform/packages/apps/DeskClock" />
   <project path="packages/apps/Email" name="platform/packages/apps/Email" />
   <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" />
   <project path="packages/apps/Gallery3D" name="platform/packages/apps/Gallery3D" />
@@ -141,13 +145,11 @@
   <project path="packages/apps/IM" name="platform/packages/apps/IM" />
   <project path="packages/apps/Launcher2" name="platform/packages/apps/Launcher2" />
   <project path="packages/apps/Mms" name="platform/packages/apps/Mms" />
-  <project path="packages/apps/Music" name="platform/packages/apps/Music" />
   <project path="packages/apps/PackageInstaller" name="platform/packages/apps/PackageInstaller" />
   <project path="packages/apps/Phone" name="platform/packages/apps/Phone" />
   <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
   <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" />
-  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" />
   <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
   <project path="packages/apps/SpeechRecorder" name="platform/packages/apps/SpeechRecorder" />
   <project path="packages/apps/Stk" name="platform/packages/apps/Stk" />
@@ -155,28 +157,16 @@
   <project path="packages/experimental" name="platform/packages/experimental" />
   <project path="packages/inputmethods/LatinIME" name="platform/packages/inputmethods/LatinIME" />
   <project path="packages/inputmethods/OpenWnn" name="platform/packages/inputmethods/OpenWnn" />
-  <project path="packages/inputmethods/PinyinIME" name="platform/packages/inputmethods/PinyinIME" />
   <project path="packages/providers/ApplicationsProvider" name="platform/packages/providers/ApplicationsProvider" />
   <project path="packages/providers/CalendarProvider" name="platform/packages/providers/CalendarProvider" />
   <project path="packages/providers/ContactsProvider" name="platform/packages/providers/ContactsProvider" />
-  <project path="packages/providers/DownloadProvider" name="platform/packages/providers/DownloadProvider" />
   <project path="packages/providers/DrmProvider" name="platform/packages/providers/DrmProvider" />
   <project path="packages/providers/GoogleContactsProvider" name="platform/packages/providers/GoogleContactsProvider" />
   <project path="packages/providers/MediaProvider" name="platform/packages/providers/MediaProvider" />
   <project path="packages/providers/TelephonyProvider" name="platform/packages/providers/TelephonyProvider" />
   <project path="packages/providers/UserDictionaryProvider" name="platform/packages/providers/UserDictionaryProvider" />
-  <project path="packages/wallpapers/Basic" name="platform/packages/wallpapers/Basic" />
   <project path="packages/wallpapers/LivePicker" name="platform/packages/wallpapers/LivePicker" />
-  <project path="packages/wallpapers/MagicSmoke" name="platform/packages/wallpapers/MagicSmoke" />
-  <project path="packages/wallpapers/MusicVisualization" name="platform/packages/wallpapers/MusicVisualization" />
 
-  <project path="prebuilt" name="platform/prebuilt" />
-  <project path="sdk" name="platform/sdk"  revision="tools_r6"/>
-  <project path="system/bluetooth" name="platform/system/bluetooth" />
-  <project path="system/core" name="platform/system/core" />
-  <project path="system/extras" name="platform/system/extras" />
   <project path="system/netd" name="platform/system/netd" />
-  <project path="system/vold" name="platform/system/vold" />
-  <project path="system/wlan/ti" name="platform/system/wlan/ti" />
 
 </manifest>
