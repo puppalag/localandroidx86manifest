@@ -22,7 +22,9 @@
   <project path="device/vm/vm" name="device/vm/vm" remote="x86" revision="froyo-x86" />
   <project path="external/bluetooth/bluez" name="platform/external/bluetooth/bluez" remote="x86" revision="froyo-x86" />
   <project path="external/busybox" name="platform/external/busybox" remote="x86" revision="froyo-x86" />
+  <project path="external/drm" name="platform/external/drm" remote="x86" revision="froyo-x86" />
   <project path="external/eject" name="platform/external/eject" remote="x86" revision="froyo-x86" />
+  <project path="external/mesa" name="platform/external/mesa" remote="x86" revision="froyo-x86" />
   <project path="external/ppp" name="platform/external/ppp" remote="x86" revision="froyo-x86" />
   <project path="external/stlport" name="platform/external/stlport" remote="x86" revision="froyo-x86" />
   <project path="external/tremolo" name="platform/external/tremolo" remote="x86" revision="froyo-x86" />
