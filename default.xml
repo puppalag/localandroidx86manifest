@@ -33,6 +33,7 @@
   <project path="frameworks/base" name="platform/frameworks/base" remote="x86" revision="froyo-x86" />
   <project path="frameworks/policies/base" name="platform/frameworks/policies/base" remote="x86" revision="froyo-x86" />
   <project path="hardware/intel/i915" name="platform/hardware/intel/i915" remote="x86" revision="froyo-x86" />
+  <project path="hardware/libhardware" name="platform/hardware/libhardware" remote="x86" revision="froyo-x86" />
   <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" remote="x86" revision="froyo-x86" />
   <project path="hardware/ril" name="platform/hardware/ril" remote="x86" revision="froyo-x86" />
   <project path="ndk" name="platform/ndk" remote="x86" revision="froyo-x86" />
@@ -137,7 +138,6 @@
   <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" />
 
   <project path="hardware/alsa_sound" name="platform/hardware/alsa_sound" />
-  <project path="hardware/libhardware" name="platform/hardware/libhardware" />
 
   <project path="packages/apps/AccountsAndSyncSettings" name="platform/packages/apps/AccountsAndSyncSettings" />
   <project path="packages/apps/AlarmClock" name="platform/packages/apps/AlarmClock" />
