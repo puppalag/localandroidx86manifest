@@ -18,6 +18,7 @@
   <project path="dalvik" name="platform/dalvik" remote="x86" revision="froyo-x86" />
   <project path="development" name="platform/development" remote="x86" revision="froyo-x86" />
   <project path="device/asus/eeepc" name="device/asus/eeepc" remote="x86" revision="froyo-x86" />
+  <project path="device/viewsonic/viewpad10" name="device/viewsonic/viewpad10" remote="x86" revision="froyo-x86" />
   <project path="device/viliv/s5" name="device/viliv/s5" remote="x86" revision="froyo-x86" />
   <project path="device/vm/vm" name="device/vm/vm" remote="x86" revision="froyo-x86" />
   <project path="external/bluetooth/bluez" name="platform/external/bluetooth/bluez" remote="x86" revision="froyo-x86" />
