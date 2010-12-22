@@ -3,6 +3,8 @@
   <remote  name="korg"
            fetch="git://android.git.kernel.org/"
            review="review.source.android.com" />
+  <remote  name="x86"
+           fetch="git://git.android-x86.org/" />
   <default revision="gingerbread"
            remote="korg" />
 
