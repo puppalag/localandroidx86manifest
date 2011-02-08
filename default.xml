@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote  name="korg"
+           fetch="git://android.git.kernel.org/"
+           review="review.source.android.com" />
+  <remote  name="x86"
+           fetch="git://git.android-x86.org/" />
+  <default revision="froyo"
+           remote="korg" />
+  <!-- from x86 port repositories -->
+  <project path="build" name="platform/build" remote="x86" revision="froyo-x86" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+
+  <!-- from original Android repositories -->
+  <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" />
+
+</manifest>
